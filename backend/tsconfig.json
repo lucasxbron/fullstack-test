@@ -9,8 +9,7 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "typeRoots": ["./node_modules/@types", "./types"],
-    "types": ["node"]
+    "typeRoots": ["./node_modules/@types", "./types"]
   },
 
   "include": ["src/**/*", "types.ts"]
