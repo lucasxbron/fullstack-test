@@ -8,13 +8,22 @@ import cookieParser from "cookie-parser";
 
 import cors from "cors";
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://logintest-508cv82jq-antonio-champi-hs-projects.vercel.app/",
+];
 const app = express();
 
 app.use(
   cors({
-    origin: config.FRONTEND_URL,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true, // sehr wichtig für Cookies
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Nicht erlaubte Origin: " + origin));
+      }
+    },
+    credentials: true,
   })
 );
 //app.options("*", cors());
