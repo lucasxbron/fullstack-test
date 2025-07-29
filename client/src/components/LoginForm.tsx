@@ -18,7 +18,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
     try {
       //const url = import.meta.env.ITE_API_URL;
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/auth/login`,
+        `${import.meta.env.VITE_API_URL}/auth/login`,
         {
           method: "POST",
           credentials: "include",

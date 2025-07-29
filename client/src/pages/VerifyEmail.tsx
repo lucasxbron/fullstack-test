@@ -17,7 +17,7 @@ const VerifyEmail = () => {
     const verify = async () => {
       try {
         const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/api/auth/verify?token=${token}`
+          `${import.meta.env.VITE_API_URL}/auth/verify?token=${token}`
         );
         const data = await response.json();
 
