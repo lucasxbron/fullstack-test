@@ -46,5 +46,3 @@ connect();
 app.listen(config.PORT, () =>
   console.log(`Server is running on PORT http//localhost:${config.PORT}`)
 );
-//https://fullstack-9wus.onrender.com/api/hello
-//admin123!&/MN1231asc
