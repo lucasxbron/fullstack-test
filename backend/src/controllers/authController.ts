@@ -84,8 +84,8 @@ export const login = async (
       httpOnly: true,
       //zum Deployen
       //secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-      secure: false,
+      sameSite: "none",
+      secure: true,
       maxAge: 1000 * 60 * 60 * 24, // 1 d
     });
 
