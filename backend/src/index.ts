@@ -27,7 +27,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 
 // Beispiel-Route
-app.get("/api/hello", (_req, res) => {
+app.get("/", (_req, res) => {
   res.json({ message: "Hello from backend" });
 });
 
@@ -38,3 +38,4 @@ app.listen(config.PORT, () =>
   console.log(`Server is running on PORT http//localhost:${config.PORT}`)
 );
 //https://fullstack-9wus.onrender.com/api/hello
+//admin123!&/MN1231asc
