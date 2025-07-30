@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function RegisterForm() {
   const [form, setForm] = useState({
@@ -41,7 +41,7 @@ function RegisterForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      <h2 className="text-2xl font-bold">Registrieren</h2>
+      <h2 className="text-2xl font-bold text-center">Registrieren</h2>
 
       <input
         name="username"
@@ -50,17 +50,17 @@ function RegisterForm() {
         value={form.username}
         onChange={handleChange}
         required
-        className="w-full px-3 py-2 border rounded"
+        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
       />
 
       <input
         name="email"
         type="email"
-        placeholder="E-Mail"
+        placeholder="@-email"
         value={form.email}
         onChange={handleChange}
         required
-        className="w-full px-3 py-2 border rounded"
+        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
       />
 
       <input
@@ -70,7 +70,7 @@ function RegisterForm() {
         value={form.password}
         onChange={handleChange}
         required
-        className="w-full px-3 py-2 border rounded"
+        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
       />
 
       <button
@@ -79,6 +79,12 @@ function RegisterForm() {
       >
         Registrieren
       </button>
+      <p className="text-sm text-center text-gray-700">
+        Bereist registriert?{" "}
+        <Link to="/dashboard" className="text-blue-600 hover:underline">
+          Jetzt einlogen
+        </Link>
+      </p>
 
       {message && <p className="text-sm text-center">{message}</p>}
     </form>

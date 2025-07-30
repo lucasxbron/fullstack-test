@@ -46,7 +46,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-sm mx-auto mt-10 flex flex-col gap-4"
+      className="max-w-sm mx-auto mt-10 flex flex-col gap-2"
     >
       <h2 className="text-xl text-center font-bold">Login</h2>
       <input
