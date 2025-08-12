@@ -9,7 +9,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 
 const allowedOrigins = [
-  "https://github.com/lucasxbron/fullstack-test.git",
+  "https://fullstack-test-t4co.onrender.com/",
 ];
 const app = express();
 
