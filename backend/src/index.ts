@@ -9,10 +9,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 
 const allowedOrigins = [
-  "https://fullstack-20s2.onrender.com",
-  "https://fullstack-zeta-ivory.vercel.app",
-  "https://fullstack-git-main-antonio-champi-hs-projects.vercel.app",
-  "https://fullstack-ovwme7c7w-antonio-champi-hs-projects.vercel.app",
+https://github.com/lucasxbron/fullstack-test.git
 ];
 const app = express();
 
